@@ -1,0 +1,37 @@
+h1,
+h2,
+div > h1,
+div > h2 {
+	font-family: $font-titles;
+	color: $color-text-titles;
+	font-size: $font-size-title;
+	margin: auto;
+}
+
+html[theme='dark'] {
+	h1,
+	h2,
+	h3,
+	h4,
+	h5,
+	h6,
+	label,
+	.form-check-label,
+	.form-check,
+	p {
+		color: $light;
+	}
+	#message-form > div.form-check.form-switch.mb-3 > label {
+		color: $light;
+	}
+}
+
+.profile-item {
+	font-weight: bolder;
+}
+
+@media screen and (min-width: 768px) {
+	#main-title {
+		font-size: $font-size-title-desktop;
+	}
+}

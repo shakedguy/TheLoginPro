@@ -1,0 +1,210 @@
+@import '../../node_modules/bootstrap/scss/bootstrap.scss';
+
+// Colors
+$bg-warning: #ffa900;
+$hover-brightness: 1.2;
+$color-text-titles: #d5d8dc;
+$bg-danger: #f93154;
+$bg-success: #00b74a;
+$text-dark: #333;
+$text-light: #ddd;
+$active-nav-dark: rgba(0, 58, 117, 0.6);
+$card-footer-light: #fff;
+$logout-toast-dark: #232930;
+//rgba(10, 25, 41, 0.7);
+//rgba(0, 58, 117, 0.2)
+//rgba(0, 58, 117, 0.2)
+
+//font-family
+$font-primary: 'Raleway', sans-serif;
+$font-secodary: 'Dosis', sans-serif;
+$font-titles: 'Poiret One', cursive;
+
+//font-size
+$font-size-small: 10px;
+$font-size: 12px;
+$font-size-card-title: 14px;
+$font-size-card-desktop: 13px;
+$font-size-big: 16px;
+$font-size-title: 20px;
+$font-size-title-desktop: 26px;
+$line-height: 150%;
+
+//icons
+$icon-size-small: 14px;
+$icon-size: 16px;
+$icon-size-desktop: 20px;
+
+//layout
+$width-card: 18rem;
+$width-card-small: 200px;
+$width-card-middle: 23rem;
+$width-card-desktop: 20rem;
+$sender-card-desktop: 30rem;
+$table-card: 98vw;
+$width-content: 1080px;
+$width-content-small: 800px;
+
+//navbar
+$navbar-padding: 8px 8px;
+$navbar-padding-small: 4px 4px;
+$nav-margin-bottom: 1rem;
+$nav-margin-bottom-desktop: 5px;
+$nav-height: 8vh;
+$nav-height-desktop: 10vh;
+
+//menu
+$menu-width: 60vw;
+$menu-width-desktop: 20vw;
+
+* {
+	margin: 0;
+	padding: 0;
+	box-sizing: border-box;
+}
+
+html {
+	height: 100vh;
+	width: 100vw;
+}
+
+html.transition,
+html.transition *,
+html.transition:after,
+html.transition:before {
+	transition: all 800ms !important;
+	transition-delay: 0 !important;
+}
+
+body {
+	color: $secondary;
+	font-family: $font-primary;
+	line-height: $line-height;
+	margin: auto;
+	overflow-x: hidden;
+	padding: 0;
+	font-size: $font-size;
+	-webkit-appearance: none;
+	-moz-appearance: none;
+	appearance: none;
+	max-height: 100vh;
+	max-width: 100vw;
+	display: grid;
+	grid-template-rows: [first] 10vh [line2] 90vh;
+}
+footer,
+header,
+main {
+	margin: auto;
+	padding: 1rem;
+	text-align: center;
+	font-family: $font-primary;
+}
+
+.page {
+	height: 100%;
+	width: 100%;
+	margin: auto;
+	padding: 1rem;
+	text-align: center;
+	font-family: $font-primary;
+}
+
+.header-login,
+.main-login {
+	padding: 0.5rem 1rem;
+}
+
+footer {
+	font-family: $font-secodary;
+	padding: 0;
+	position: fixed;
+	bottom: 0;
+	left: 0;
+	right: 0;
+	display: flex;
+	justify-content: center;
+	font-size: 10px;
+	p {
+		margin: 0;
+		padding: 0;
+		font-size: $font-size-small;
+	}
+}
+
+#firebaseui-auth-container {
+	background-color: transparent;
+	.firebaseui-card-content {
+		background-color: transparent;
+		form {
+			background-color: transparent;
+			ul {
+				background-color: transparent;
+				li {
+					background-color: transparent;
+				}
+			}
+		}
+	}
+}
+
+#main-menu-canvas {
+	width: $menu-width;
+}
+
+#main-spinner {
+	position: fixed;
+	top: 50%;
+	left: 50%;
+	transform: translate(-50%, -50%);
+}
+
+.mailing-list-containers {
+	padding: 0;
+	margin: 0;
+}
+
+.custom-tooltip {
+	--bs-tooltip-bg: #fff;
+}
+
+html[theme='dark'] {
+	body,
+	.offcanvas-header {
+		background-color: $secondary;
+	}
+	nav {
+		background-color: $dark;
+	}
+	#main-menu-canvas,
+	ul,
+	li {
+		background-color: $dark;
+		color: $light;
+	}
+	.list-group-item {
+		border-color: #6c757d;
+	}
+
+	.custom-tooltip {
+		--bs-tooltip-bg: var(--bs-primary);
+	}
+}
+
+@media screen and (min-width: 768px) {
+	#main-menu-canvas {
+		max-width: $menu-width-desktop;
+	}
+	footer > p {
+		font-size: $font-size;
+	}
+}
+@import './pages.scss';
+@import './card.scss';
+@import './navbar.scss';
+@import './text.scss';
+@import './buttons.scss';
+@import './toasts.scss';
+@import './animation.scss';
+@import './tables.scss';
+@import './icons.scss';

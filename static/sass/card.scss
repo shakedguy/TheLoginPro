@@ -1,0 +1,87 @@
+.card {
+	margin: auto;
+	display: block;
+	width: $width-card-small;
+
+	font-size: $font-size-small;
+	border-radius: 5px;
+	.card-body {
+		border-radius: 5px;
+	}
+	.card-body {
+		max-width: 80%;
+		h5 {
+			font-size: $font-size-card-title;
+		}
+		.card-text,
+		ul {
+			text-decoration: none;
+		}
+	}
+	.card-footer {
+		background-color: $card-footer-light;
+	}
+}
+
+#table-spinner {
+	margin-top: 8rem;
+}
+
+#card-sender {
+	width: $width-card;
+	display: block;
+	padding: 2rem;
+}
+
+#card-table {
+	width: $width-card;
+}
+
+html[theme='dark'] {
+	.card,
+	.card-body,
+	.card-footer,
+	#profile-card {
+		background-color: $dark;
+	}
+
+	.form-check-label {
+		color: $light;
+	}
+}
+
+#placeholder-card {
+	.card-body {
+		#placeholder-card-group {
+			.placeholder {
+				min-width: 15rem;
+			}
+		}
+	}
+}
+
+@media screen and (min-width: 768px) {
+	.card {
+		width: $width-card-desktop;
+		font-size: $font-size-card-desktop;
+		.card-body {
+			max-width: 100%;
+			h5 {
+				font-size: $font-size-title;
+			}
+			.list-group {
+				li {
+					font-size: $font-size-card-desktop;
+				}
+			}
+		}
+	}
+	#card-sender {
+		width: $sender-card-desktop;
+		font-size: $font-size-card-desktop;
+	}
+	#card-table {
+		min-height: 30rem;
+		width: $table-card;
+	}
+}

@@ -1,0 +1,97 @@
+a,
+button {
+	font-size: $font-size;
+}
+
+a,
+.right-elements > a,
+.right-elements > button {
+	width: fit-content;
+	height: fit-content;
+	text-decoration: none;
+	align-content: center;
+	justify-content: center;
+	align-items: center;
+	justify-items: center;
+	padding: 5px 8px;
+	margin: auto;
+	cursor: pointer;
+	&:hover {
+		filter: brightness($hover-brightness);
+	}
+}
+
+button {
+	font-family: $font-primary;
+	align-content: center;
+	justify-content: center;
+	&:hover {
+		cursor: pointer;
+		filter: brightness($hover-brightness);
+	}
+}
+
+#login-button {
+	border: none;
+	margin: 1rem auto;
+	-webkit-appearance: none;
+	-moz-appearance: none;
+	appearance: none;
+}
+
+#btn-menu {
+	display: inherit;
+	padding: 0px 10px;
+	i {
+		font-size: $icon-size;
+	}
+}
+
+.btn-toast {
+	width: 120px;
+	text-align: center;
+}
+
+#email,
+#whatsapp,
+#sms {
+	min-width: 4rem;
+}
+
+html[theme='dark'] {
+	#login-button {
+		background-color: $active-nav-dark;
+	}
+
+	.paginate_button > a:hover {
+		background-color: $dark !important;
+		color: $light !important;
+	}
+	#main-menu > li.nav-item.main-nav > a {
+		color: $light;
+	}
+	#main-menu > li.nav-item.main-nav:hover {
+		background-color: $secondary;
+	}
+}
+
+#admin-table-btn {
+	width: fit-content;
+	justify-self: end;
+}
+
+#refresh-btn {
+	margin-left: 1rem;
+}
+
+@media screen and (min-width: 768px) {
+	a,
+	button {
+		font-size: $font-size-big;
+	}
+	#email,
+	#whatsapp,
+	#sms {
+		min-width: 6rem;
+	}
+}

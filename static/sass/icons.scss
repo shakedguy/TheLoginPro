@@ -1,0 +1,45 @@
+.arrow-forward {
+	cursor: pointer;
+	-webkit-animation: spin 0.6s ease-out forwards;
+	-moz-animation: spin 0.6s ease-out forwards;
+	animation: spin 0.6s ease-out forwards;
+}
+
+button,
+a {
+	i,
+	.fa,
+	.fas,
+	.bi,
+	.bi.bi-moon,
+	.bi::before,
+	.bi::after {
+		font-size: $icon-size-small;
+		margin: auto;
+		align-self: center;
+		justify-self: center;
+	}
+}
+
+// lottie-player {
+// 	width: 25px;
+// 	height: 35px;
+// 	margin: 0;
+// 	padding: 0;
+// }
+
+@media screen and (min-width: 768px) {
+	button,
+	a,
+	.offcanvas-header {
+		i,
+		.fa,
+		.fas,
+		.bi,
+		.bi.bi-moon,
+		.bi::before,
+		.bi::after {
+			font-size: $icon-size-desktop;
+		}
+	}
+}

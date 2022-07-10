@@ -1,0 +1,32 @@
+#logout-toast,
+.toast-body,
+#toast-header {
+	background-color: $logout-toast-dark;
+	color: $light;
+	border: none;
+	border-radius: 3px;
+	#btn-cancel {
+		background-color: $bg-danger;
+		color: $light;
+		border: none;
+	}
+	#btn-logout {
+		background-color: $bg-success;
+		color: $light;
+		border: none;
+	}
+}
+
+#logged-toast-text,
+#already-logged-toast,
+#already-logged-toast-header {
+	background-color: $bg-danger;
+}
+
+html[theme='dark'] {
+	#logout-toast,
+	.toast-body,
+	#toast-header {
+		background-color: $dark;
+	}
+}
