@@ -12,10 +12,10 @@ import compression from 'compression';
 const globalMiddlewares = express();
 globalMiddlewares.use(express.json());
 globalMiddlewares.use(cookieParser());
-globalMiddlewares.use(csurf({ cookie: true }));
+// globalMiddlewares.use(csurf({ cookie: true }));
 globalMiddlewares.use(bodyParser.json());
 globalMiddlewares.use(bodyParser.urlencoded({ extended: true }));
-globalMiddlewares.use(helmet.crossOriginResourcePolicy());
+// globalMiddlewares.use(helmet.crossOriginResourcePolicy());
 globalMiddlewares.use(helmet.dnsPrefetchControl());
 globalMiddlewares.use(helmet.expectCt());
 globalMiddlewares.use(helmet.frameguard());
@@ -48,9 +48,9 @@ globalMiddlewares.use(
 	})
 );
 
-globalMiddlewares.all('*', (req, res, next) => {
-	res.cookie('XSRF-TOKEN', req.csrfToken());
-	next();
-});
+// globalMiddlewares.all('*', (req, res, next) => {
+// 	res.cookie('XSRF-TOKEN', req.csrfToken());
+// 	next();
+// });
 
 export default globalMiddlewares;
