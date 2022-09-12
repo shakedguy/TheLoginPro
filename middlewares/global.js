@@ -16,7 +16,7 @@ globalMiddlewares.use(cookieParser());
 // globalMiddlewares.use(csurf({ cookie: true }));
 globalMiddlewares.use(bodyParser.json());
 globalMiddlewares.use(bodyParser.urlencoded({ extended: true }));
-globalMiddlewares.use(cors({ origin: 'http://localhost:3000' }));
+globalMiddlewares.use(cors({ origin: '*' }));
 // globalMiddlewares.use(helmet.crossOriginResourcePolicy());
 // globalMiddlewares.use(helmet.dnsPrefetchControl());
 // globalMiddlewares.use(helmet.expectCt());
@@ -57,7 +57,7 @@ globalMiddlewares.use(compression());
 
 globalMiddlewares.use((req, res, next) => {
 	// Website you wish to allow to connect
-	res.setHeader('Access-Control-Allow-Origin', 'http://localhost:3000');
+	res.setHeader('Access-Control-Allow-Origin', '*');
 
 	// Request methods you wish to allow
 	res.setHeader('Access-Control-Allow-Methods', 'GET, POST, OPTIONS, PUT, PATCH, DELETE');
