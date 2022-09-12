@@ -10,11 +10,11 @@ import helmet from 'helmet';
 import compression from 'compression';
 
 const globalMiddlewares = express();
-// globalMiddlewares.use(express.json());
-// globalMiddlewares.use(cookieParser());
+globalMiddlewares.use(express.json());
+globalMiddlewares.use(cookieParser());
 // globalMiddlewares.use(csurf({ cookie: true }));
-// globalMiddlewares.use(bodyParser.json());
-// globalMiddlewares.use(bodyParser.urlencoded({ extended: true }));
+globalMiddlewares.use(bodyParser.json());
+globalMiddlewares.use(bodyParser.urlencoded({ extended: true }));
 // globalMiddlewares.use(helmet.crossOriginResourcePolicy());
 // globalMiddlewares.use(helmet.dnsPrefetchControl());
 // globalMiddlewares.use(helmet.expectCt());
