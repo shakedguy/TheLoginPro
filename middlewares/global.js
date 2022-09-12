@@ -8,6 +8,7 @@ import { Firestore } from '../utils/firebaseService.js';
 import { FirestoreStore } from '@google-cloud/connect-firestore';
 import helmet from 'helmet';
 import compression from 'compression';
+import cors from 'cors';
 
 const globalMiddlewares = express();
 globalMiddlewares.use(express.json());
@@ -15,6 +16,7 @@ globalMiddlewares.use(cookieParser());
 // globalMiddlewares.use(csurf({ cookie: true }));
 globalMiddlewares.use(bodyParser.json());
 globalMiddlewares.use(bodyParser.urlencoded({ extended: true }));
+globalMiddlewares.use(cors({ origin: 'http://localhost:3000' }));
 // globalMiddlewares.use(helmet.crossOriginResourcePolicy());
 // globalMiddlewares.use(helmet.dnsPrefetchControl());
 // globalMiddlewares.use(helmet.expectCt());
